@@ -4,9 +4,7 @@ import styled from "styled-components";
 
 const ContainerStyle=styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 `
 const Recipe = ({recipes}) => {
 
@@ -15,7 +13,7 @@ const Recipe = ({recipes}) => {
             {
                 recipes.map((recipe)=>{
                     return(
-                        <RecipeInfo name={recipe.name} time={recipe.time} servings={recipe.servings} calories={recipe.calories} image={recipe.image}/>
+                        <RecipeInfo name={recipe.name} time={recipe.time} servings={recipe.servings} calories={recipe.calories} image={recipe.image} difficulty={recipe.difficulty}/>
                     )
                 })
             }    

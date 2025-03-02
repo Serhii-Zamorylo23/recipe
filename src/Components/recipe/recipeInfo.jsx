@@ -2,9 +2,12 @@ import React from "react";
 import { GiAlarmClock } from "react-icons/gi";
 import { BiBarChartAlt,BiCircleThreeQuarter } from "react-icons/bi";
 import styled from "styled-components";
-
+ 
 const ItemStyle=styled.li`
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 const ImgStyle=styled.img`
     width: 300px;
@@ -21,11 +24,27 @@ const DivStyle=styled.div`
     width: 310px;
 `
 const DifficultyDivStyle=styled.div`
-    height: 71px;
-    width: 161px;
+    width: 170px;
     background: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 110px;
 `
-const RecipeInfo=({name,time,servings,calories,difficulty,image})=>{
+const DifficultyContainerStyle=styled.div`
+    display: flex;
+    justify-content: space-around;
+`
+const DifficultyItemStyle=styled.div`
+    background: #FA7070;
+    color: white;
+    width: 60px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+`
+const RecipeInfo=({name,time,servings,calories,image,difficulty})=>{
     return(
         <ItemStyle>
             <ImgStyle src={image} />
@@ -37,11 +56,9 @@ const RecipeInfo=({name,time,servings,calories,difficulty,image})=>{
             </DivStyle>
             <DifficultyDivStyle>
                 <h2>Difficulty</h2>
-                <div>
-                    <div>Easy</div>
-                    <div>Medium</div>
-                    <div>Hard</div>
-                </div>
+                <DifficultyContainerStyle>
+                    <DifficultyItemStyle>{difficulty}</DifficultyItemStyle>
+                </DifficultyContainerStyle>
             </DifficultyDivStyle>
         </ItemStyle>
     )
