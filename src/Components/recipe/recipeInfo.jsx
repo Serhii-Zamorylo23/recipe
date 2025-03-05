@@ -36,6 +36,7 @@ const DifficultyContainerStyle=styled.div`
 `
 const DifficultyItemStyle=styled.div`
     background: #FA7070;
+    color: white;
     width: 60px;
     height: 254px;
     display: flex;
