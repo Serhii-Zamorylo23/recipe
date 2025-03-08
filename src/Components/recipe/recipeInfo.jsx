@@ -38,7 +38,7 @@ const DifficultyItemStyle=styled.div`
     background: #FA7070;
     color: white;
     width: 60px;
-    height: 254px;
+    height: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
