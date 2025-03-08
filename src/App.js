@@ -1,5 +1,5 @@
 import './App.css';
-import Recipe from './Components/recipe/recipe.jsx';
+import Recipe from './Components/recipe/recipe';
 import React from 'react';
 import recipejson from './Components/recipe.json'
 function App() {
